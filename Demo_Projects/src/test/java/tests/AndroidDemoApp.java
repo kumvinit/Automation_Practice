@@ -28,10 +28,8 @@ public class AndroidDemoApp {
             caps.setCapability(MobileCapabilityType.UDID, "RZCT30F4HXV");
             //caps.setCapability("ignoreHiddenApiPolicyError", true);
             caps.setCapability("appPackage", "com.saucelabs.mydemoapp.rn");
-            caps.setCapability("appActivity", "MainActivity");
             URL url = new URL("http://127.0.0.1:4723/wd/hub");
             driver=new AndroidDriver<>(url, caps);
-            System.out.println("Driver is" + driver.toString());
         }catch(Exception exp) {
             System.out.println("cause is " + exp.getCause());
             System.out.println("Message is " + exp.getMessage());

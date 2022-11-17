@@ -41,22 +41,39 @@ public class CalculatorApp {
     }
     @Test
     public void SampleTest() throws InterruptedException {
+        WebElement one =driver.findElement(By.id("com.innovit.scientificcalculator:id/number1Button"));//button 1
+        WebElement two =driver.findElement(By.id("com.innovit.scientificcalculator:id/number2Button"));//button 2
         WebElement three =driver.findElement(By.id("com.innovit.scientificcalculator:id/number3Button"));//button 3
+        WebElement four =driver.findElement(By.id("com.innovit.scientificcalculator:id/number4Button"));//button 4
         WebElement five =driver.findElement(By.id("com.innovit.scientificcalculator:id/number5Button"));//button 5
-        WebElement plus =driver.findElement(By.id("com.innovit.scientificcalculator:id/plusButton"));//button +
-        WebElement seven =driver.findElement(By.id("com.innovit.scientificcalculator:id/number7Button")); //button7
+        WebElement six =driver.findElement(By.id("com.innovit.scientificcalculator:id/number6Button"));//button 6
+        WebElement seven =driver.findElement(By.id("com.innovit.scientificcalculator:id/number7Button")); //button 7
+        WebElement eight =driver.findElement(By.id("com.innovit.scientificcalculator:id/number8Button"));//button 8
+        WebElement nine =driver.findElement(By.id("com.innovit.scientificcalculator:id/number9Button"));//button 9
+        WebElement zero =driver.findElement(By.id("com.innovit.scientificcalculator:id/number9Button"));//button 0
+        WebElement decimal =driver.findElement(By.id("com.innovit.scientificcalculator:id/decimalButton"));//button decimal
+        WebElement Cancel =driver.findElement(By.id("com.innovit.scientificcalculator:id/acButton"));//button All Cancel
+        WebElement backSpace =driver.findElement(By.id("com.innovit.scientificcalculator:id/backspaceButton"));//button BackSpace
         WebElement equalTo =driver.findElement(By.id("com.innovit.scientificcalculator:id/equalButton")); //Button =
+        WebElement divide =driver.findElement(By.id("com.innovit.scientificcalculator:id/divideButton")); //Button divide
+        WebElement multiply =driver.findElement(By.id("com.innovit.scientificcalculator:id/multiplyButton")); //Button x multiply
+        WebElement plus =driver.findElement(By.id("com.innovit.scientificcalculator:id/plusButton"));//button +
+        WebElement subtract =driver.findElement(By.id("com.innovit.scientificcalculator:id/subtractButton"));
+        WebElement percentage =driver.findElement(By.id("com.innovit.scientificcalculator:id/percentButton"));
 
         System.out.println("I am inside sample Test");
 
-        three.click();
+        five.click();
+        nine.click();
         plus.click();
-        seven.click();
+        three.click();
+        subtract.click();
+        four.click();
         equalTo.click();
 
         Thread.sleep(2000);
         String result =driver.findElement(By.id("com.innovit.scientificcalculator:id/displayResult")).getText();
-        if (result.equals("=10")){
+        if (result.equals("=58")){
             System.out.println("Test is passed");
         }else {
             System.out.println("Test Failed");
